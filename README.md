@@ -22,25 +22,19 @@ Developed by: Dharshni V M
 RegisterNumber: 212223240029
 */
 
-def sqrt(x):
-    if x<0:
-        print("not defined")
-    y=x/2.0
-    while True:
-        new=0.5*(y+x/y)
-        if new==y:
-            break
-        y=new
-    return y
-num=int(input())
-res=sqrt(num)
-print(f"Square root of the number: {res}")
+def newton(n,nt=100):
+    a=float(n)
+    for i in range(nt):
+        n=0.5*(n+a/n)
+    return n
+a=int(input())
+print("Square root of the number:",newton(a))
 
 ```
 
 ## Output:
 
-![Output](Output-1.png)
+![OUTPUT](Output.png)
 
 ## Result:
 Thus the program to find the square root for the given number(newton's method) using function is written and verified using python programming.
